@@ -1,4 +1,7 @@
 # React
+There's going to be three branch for each plan with following tasks. 
+Each branch are going to be named after the plan eg. "Plan A" and will contain a readme file with task for the following plan. 
+
 ## Plan A
 **Get Started**
 
