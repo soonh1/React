@@ -1,40 +1,62 @@
-# Plan B - Tasks
+# React
+There's going to be three branch for each plan with following tasks. 
+Each branch are going to be named after the plan eg. "Plan A" and will contain a readme file with task for the following plan. 
 
-## 1 Add a Input field
-Add a text input field. Remember that you need a state object to handle the updating of the value.
+## Plan A
+**Get Started**
 
-## 2 Make your List Component dynamic
-Change your App to pass dynamic items to your List Component instead of hardcoded values.
-Add a button next to your text input and when pressed append the entered text to your List Components items.
+The essential guide to getting started with React. This walkthrough tutorial will have you building an application in React from scratch, learning about state, props, and components along the way. 
 
-## 3 Make a List Item Component
-Create a new Item Component for the items in your List Component.
+https://www.taniarascia.com/getting-started-with-react/
 
-```
-<List> 
-  <Item/>
-  <Item/> 
-  <Item/> 
-  ...
-</List>
-```
+**Thinking in React**
 
-## 4 Add a delete button to the Item Component
-Add a button to your Item Component that allows to remove the given item from the List.
+One of the many great parts of React is how it makes you think about apps as you build them. In this document, we’ll walk you through the thought process of building a searchable product data table using React.
 
-## 5 Implement react-router-dom
-Add a BrowserRouter to your App to allow multiple pages depending of the URL path.
+https://reactjs.org/docs/thinking-in-react.html
 
-## 6 Add authentication
-Create a Context that keeps track of user authentication with a simple credentials object. Example:
+## Plan B
+**React Hooks**
 
-```
-{ id: 42, name: ‘John Doe’,}
-```
+Hooks are an alternative to classes. If you've used React before, you'll be familiar with simple (functional) components and class components.
 
-## 7 Make a login screen
-Add a simple login screen that takes a username and password.
-Implement a dummy authentication service that looks for a given hardcoded credentials.
+https://www.taniarascia.com/crud-app-in-react-with-hooks/
 
-## 8 Use Auth Context
-Using your Auth Context update your BrowserRouter to check for required authentication and redirect to the login screen if not authenticated.
+**Using Reducer**
+The State Reducer Pattern with React Hooks.
+
+https://kentcdodds.com/blog/the-state-reducer-pattern-with-react-hooks
+
+**React Router**
+
+Using React Router for a Single Page Application. Routing is how a web applications direct traffic.
+
+https://www.taniarascia.com/using-react-router-spa/
+
+**Using Context API**
+
+React Context API is a way to essentially create global variables that can be passed around in a React app.
+
+https://www.taniarascia.com/using-context-api-in-react/
+
+## Plan C
+
+**React Native**
+
+React Native is an open source framework for building Android and iOS applications using React and the app platform’s native capabilities.
+
+https://reactnative.dev/docs/getting-started
+
+**React Navigation**
+
+React Navigation's stack navigator provides a way for your app to transition between screens and manage navigation history. If your app uses only one stack navigator then it is conceptually similar to how a web browser handles navigation state - your app pushes and pops items from the navigation stack as users interact with it, and this results in the user seeing different screens.
+
+A key difference between how this works in a web browser and in React Navigation is that React Navigation's stack navigator provides the gestures and animations that you would expect on Android and iOS cd when navigating between routes in the stack.
+
+https://reactnavigation.org/docs/getting-started
+
+**RN Firebase**
+
+React Native Firebase is the officially recommended collection of packages that brings React Native support for all Firebase services on both Android and iOS apps.
+
+https://rnfirebase.io
