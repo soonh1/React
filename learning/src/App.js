@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Table from './Components/Table'
 import List from './Components/List'
+import Form from './Form'
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
     return (
       <div className="container">
         <Table characterData={characters} removeCharacter={this.removeCharacter}/>
+        <Form handleSubmit={ this.handleSubmit }/>
         <h1>Plan A</h1>
         <List listData={listItem}/>
       </div>
@@ -48,6 +50,9 @@ class App extends Component {
                 return i !== index
             })
         })
+    }
+    handleSubmit = (character) => {
+        this.setState({characters: [...this.state.characters, character]})
     }
 }
 
