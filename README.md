@@ -1,4 +1,4 @@
-# Plan A - Task
+# Plan A - Tasks
 
 ## 1 Setup your first React web project
 Create a simple and static React web project that displays a “Hello world” message when opened in a browser.
