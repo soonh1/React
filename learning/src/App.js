@@ -5,7 +5,6 @@ import Form from './Form'
 
 class App extends Component {
   render() {
-    const {characters} = this.state
     const {lists} = this.state
     return (
       <div className="container">
@@ -13,34 +12,12 @@ class App extends Component {
         <Form handleSubmit={ this.handleSubmit }/> */}
         <h1>Plan B</h1>
         <List listData={lists} removeList={this.removeList}/>
+        <Form handleSubmit={this.handleSubmit}/>
       </div>
     )
   }
   state = {
-    characters: [
-        {
-            name: 'Charlie',
-            job: 'Janitor',
-          },
-          {
-            name: 'Mac',
-            job: 'Bouncer',
-          },
-          {
-            name: 'Dee',
-            job: 'Aspring actress',
-          },
-          {
-            name: 'Dennis',
-            job: 'Bartender',
-          },
-    ],
     lists: [
-        // 'MONSTER ULTRA CITRON', 
-        // 'MONSTER ULTRA VIOLET', 
-        // 'MONSTER ULTRA PARADISE', 
-        // 'MONSTER MANGO LOCO', 
-        // 'MONSTER PIPELINE PUNCH',
         {
             id: 0,
             name: 'MONSTER ULTRA CITRON'
@@ -63,15 +40,6 @@ class App extends Component {
         },
     ],
     }
-    removeCharacter = (index) => {
-        const { characters } = this.state
-        
-        this.setState({
-            characters: characters.filter((character, i) => {
-                return i !== index
-            })
-        })
-    }
     removeList = (index) => {
         const { lists } = this.state
         this.setState({
@@ -80,8 +48,8 @@ class App extends Component {
             })
         })
     }
-    handleSubmit = (character) => {
-        this.setState({characters: [...this.state.characters, character]})
+    handleSubmit = (list) => {
+      this.setState({ lists: [...this.state.lists, list]})
     }
 }
 
