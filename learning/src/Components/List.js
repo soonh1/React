@@ -1,13 +1,14 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
+import '../Css/list.css';
 
 const ListItem = (props) => {
     const renderlist = props.listData.map((item, index) => {
      return (
-        <><div key={index}>{item}</div><button onClick={() => props.removeList(index)}>Delete</button></>
+        <li key={index}>{item.name}<button onClick={() => props.removeList(index)}>Delete</button></ li>
      )
     })
     return (
-        <div>{renderlist}</div>
+        <ul className='listItem'>{renderlist}</ul>
     )
 }
 

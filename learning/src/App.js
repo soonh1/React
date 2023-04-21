@@ -36,12 +36,31 @@ class App extends Component {
           },
     ],
     lists: [
-        'MONSTER ULTRA CITRON', 
-        'MONSTER ULTRA VIOLET', 
-        'MONSTER ULTRA PARADISE', 
-        'MONSTER MANGO LOCO', 
-        'MONSTER PIPELINE PUNCH',
-
+        // 'MONSTER ULTRA CITRON', 
+        // 'MONSTER ULTRA VIOLET', 
+        // 'MONSTER ULTRA PARADISE', 
+        // 'MONSTER MANGO LOCO', 
+        // 'MONSTER PIPELINE PUNCH',
+        {
+            id: 0,
+            name: 'MONSTER ULTRA CITRON'
+        },
+        {
+            id: 1,
+            name: 'MONSTER ULTRA VIOLET'
+        },
+        {
+            id: 2,
+            name: 'MONSTER ULTRA PARADISE'
+        },
+        {
+            id: 3,
+            name: 'MONSTER ULTRA LOCO'
+        },
+        {
+            id: 4,
+            name: 'MONSTER ULTRA PUNCH'
+        },
     ],
     }
     removeCharacter = (index) => {
