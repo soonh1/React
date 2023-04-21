@@ -8,6 +8,7 @@ class Form extends Component {
     
     state = this.initialState
 
+    // add validation
     handleChange = (event) => {
         const { name, value } = event.target
 
