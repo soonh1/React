@@ -11,7 +11,7 @@ class App extends Component {
       <div className="container">
         {/* <Table characterData={characters} removeCharacter={this.removeCharacter}/>
         <Form handleSubmit={ this.handleSubmit }/> */}
-        <h1>Plan A</h1>
+        <h1>Plan B</h1>
         <List listData={lists} removeList={this.removeList}/>
       </div>
     )

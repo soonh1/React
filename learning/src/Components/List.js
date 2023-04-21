@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 const ListItem = (props) => {
     const renderlist = props.listData.map((item, index) => {
      return (
-        <div key={index}>{item}</div>
+        <><div key={index}>{item}</div><button onClick={() => props.removeList(index)}>Delete</button></>
      )
     })
     return (
