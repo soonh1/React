@@ -12,7 +12,7 @@ class App extends Component {
         <Form handleSubmit={ this.handleSubmit }/> */}
         <h1>Plan B</h1>
         <List listData={lists} removeList={this.removeList}/>
-        <Form handleSubmit={this.handleSubmit}/>
+        <Form listData={lists} handleSubmit={this.handleSubmit}/>
       </div>
     )
   }

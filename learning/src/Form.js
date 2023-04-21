@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 class Form extends Component {
     initialState = {
         // add id
+        id: '',
         name: '',
     }
     
@@ -11,9 +12,11 @@ class Form extends Component {
     // add validation
     handleChange = (event) => {
         const { name, value } = event.target
+        const { id } = event.target
 
         this.setState({
             [name]: value,
+            [id] : this.props.listData.length,
         })
     }
 
@@ -21,6 +24,11 @@ class Form extends Component {
         this.props.handleSubmit(this.state)
         this.setState(this.initialState)
     }
+
+    // handleClick = (event) => {
+    //     event.preventDefault()
+    //     console.log(this.props.listData.length)
+    // }
 
     render() {
         const { name } = this.state
@@ -31,7 +39,7 @@ class Form extends Component {
                 <input 
                     type='text'
                     name='name'
-                    id='name'
+                    id='id'
                     value={name}
                     onChange={this.handleChange}
                 />
@@ -40,6 +48,7 @@ class Form extends Component {
                     value='Submit'
                     onClick={this.submitForm}
                 />
+                {/* <button onClick={this.handleClick}/> */}
             </form>
         )
     }
