@@ -6,19 +6,13 @@ import Form from './Form'
 class App extends Component {
   render() {
     const {characters} = this.state
-    const listItem = [
-        'MONSTER ULTRA CITRON', 
-        'MONSTER ULTRA VIOLET', 
-        'MONSTER ULTRA PARADISE', 
-        'MONSTER MANGO LOCO', 
-        'MONSTER PIPELINE PUNCH',
-    ]
+    const {lists} = this.state
     return (
       <div className="container">
         {/* <Table characterData={characters} removeCharacter={this.removeCharacter}/>
         <Form handleSubmit={ this.handleSubmit }/> */}
         <h1>Plan A</h1>
-        <List listData={listItem}/>
+        <List listData={lists} removeList={this.removeList}/>
       </div>
     )
   }
@@ -41,12 +35,28 @@ class App extends Component {
             job: 'Bartender',
           },
     ],
+    lists: [
+        'MONSTER ULTRA CITRON', 
+        'MONSTER ULTRA VIOLET', 
+        'MONSTER ULTRA PARADISE', 
+        'MONSTER MANGO LOCO', 
+        'MONSTER PIPELINE PUNCH',
+
+    ],
     }
     removeCharacter = (index) => {
         const { characters } = this.state
         
         this.setState({
             characters: characters.filter((character, i) => {
+                return i !== index
+            })
+        })
+    }
+    removeList = (index) => {
+        const { lists } = this.state
+        this.setState({
+            lists: lists.filter((list, i) => {
                 return i !== index
             })
         })
