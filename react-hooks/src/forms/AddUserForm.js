@@ -16,7 +16,7 @@ const AddUserForm = (props) => {
                 event.preventDefault()
                 if (!user.name || !user.username) 
                 // return console.log(Math.max(...props.users))
-                return console.log(props.users)
+                return console.log(props.users.map((user) => user.id))
 
                 props.addUser(user)
                 setUser(initialFormState)
