@@ -15,16 +15,16 @@ const Login = () => {
       setUser(user);
     } else {
       setAttempts(attempts + 1); // tæller op
-      alert('Invalid username or password');
+      alert('Wrong username or password');
     }
   };
 
   const disableForm = attempts >= 3; // efter 3 forsøg disable form
 
   return (
-    <form onSubmit={handleLogin}>
-      <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} disabled={disableForm} />
-      <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} disabled={disableForm} />
+    <form className='loginForm' onSubmit={handleLogin}>
+      <input className='loginInput' type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} disabled={disableForm} />
+      <input className='loginInput' type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} disabled={disableForm} />
       <button type="submit" disabled={disableForm}>Log In</button>
       {disableForm && <p>Too many failed attempts. Please try again later.</p>}
     </form>
